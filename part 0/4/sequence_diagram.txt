@@ -1,0 +1,15 @@
+title Sequence Diagram
+
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+note over Server: add new component to notes
+Server->Browser: redirect to https://studies.cs.helsinki.fi/exampleapp/notes
+note over Browser: gets redirected to location \nspecified in response from the server
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server->Browser: HTML code
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server->Browser: main.css
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server->Browser: main.js
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser: [{"content":"Jesus is LORD","date":"2022-04-08T13:05:20.648Z"},...]
+note over Browser: display updated data

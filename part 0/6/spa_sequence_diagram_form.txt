@@ -1,0 +1,6 @@
+title SPA sequence diagram
+
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over Server: add new component to notes
+Server->Browser: {"message":"note created"}
+note over Browser: display updated data
